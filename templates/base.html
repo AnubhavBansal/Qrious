@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
+      <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'Qrious/css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'Qrious/css/animate.css' %}">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <!-- remember, jQuery is completely optional -->
+  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
+  <script type='text/javascript' src="{% static 'Qrious/jquery.particleground.js' %}"></script>
+  <script type='text/javascript' src="{% static 'Qrious/js/demo.js' %}"></script>
+  </head>
+  <body>
+
+    {% block body %}
+
+
+    {% block content %}
+    {% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
+  </body>
+</html>

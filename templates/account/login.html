@@ -1,0 +1,42 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+
+
+{% get_providers as socialaccount_providers %}
+
+{% if socialaccount_providers %}
+<p>{% blocktrans with site.name as site_name %}{% endblocktrans %}</p>
+
+<div id="particles">
+  <div id="intro">
+    <h1 class="animated fadeIn">Qrious</h1>
+    <p class="animated fadeIn">An event hosted by Coding Club and CSA</p>
+
+<div class="socialaccount_ballot">
+
+  <ul class="socialaccount_providers">
+    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+  </ul>
+
+
+</div>
+      </div>
+</div>
+
+
+
+{% else %}
+
+
+{% endif %}
+
+
+
+{% endblock %}
